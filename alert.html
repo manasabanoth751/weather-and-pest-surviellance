@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alert Message</title>
+  <script>
+    function generateAlertMessage() {
+      var alertId = document.getElementById('alertId').value;
+      var alertLevel = document.getElementById('alertLevel').value;
+      var date = document.getElementById('date').value;
+      var weatherType = document.getElementById('weatherType').value;
+      var pest = document.getElementById('pest').value;
+
+      var alertMessage = '';
+
+      // Perform checks and generate alert message based on crop, weather, and pest
+      // Replace the conditions and messages with your own logic
+
+      // Example 1: If crop is tomato and weather is hot and pest is aphids
+      if (weatherType === 'hot' && pest === 'aphids') {
+        alertMessage = 'Alert ' + alertId + ': High level alert for tomato crop due to hot weather and aphid infestation. Take immediate action!';
+      }
+      // Example 2: If crop is cucumber and weather is rainy and pest is downy mildew
+      else if (weatherType === 'rainy' && pest === 'downy mildew') {
+        alertMessage = 'Alert ' + alertId + ': Medium level alert for cucumber crop due to rainy weather and downy mildew. Monitor the crop closely.';
+      }
+      // Add more conditions and messages for different crops, weather types, and pests
+
+      // Display the alert message
+      document.getElementById('alertMessage').innerHTML = alertMessage;
+    }
+  </script>
+</head>
+<body>
+  <h1>Weather-based Pest and Disease Alert</h1>
+  <form>
+    <label for="alertId">Alert ID:</label>
+    <input type="text" id="alertId" required><br>
+
+    <label for="alertLevel">Alert Level:</label>
+    <input type="text" id="alertLevel" required><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" required><br>
+
+    <label for="weatherType">Weather Type:</label>
+    <input type="text" id="weatherType" required><br>
+
+    <label for="pest">Pest:</label>
+    <input type="text" id="pest" required><br>
+
+    <button type="button" onclick="generateAlertMessage()">Generate Alert Message</button>
+  </form>
+
+  <h2>Alert Message:</h2>
+  <p id="alertMessage"></p>
+</body>
+</html>

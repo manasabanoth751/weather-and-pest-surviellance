@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      background-image: url('agriculture.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 300px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 100px auto;
+      border-radius: 5px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 7px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form action="login.html" method="post">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <p>Don't have an account? <a href="reg1.html">Register</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expected Disease for Crop</title>
+  <script>
+    function generateExpectedDisease() {
+      var date = document.getElementById('date').value;
+      var cropName = document.getElementById('cropName').value;
+      var weather = document.getElementById('weather').value;
+      var humidity = document.getElementById('humidity').value;
+
+      var expectedDisease = '';
+
+      // Perform checks and generate expected disease based on crop, weather, and humidity
+      // Replace the conditions and disease names with your own logic
+
+      // Example 1: If crop is tomato, weather is hot, and humidity is high
+      if (cropName === 'tomato' && weather === 'hot' && humidity === 'high') {
+        expectedDisease = 'Tomato Blight';
+      }
+      // Example 2: If crop is cucumber, weather is rainy, and humidity is moderate
+      else if (cropName === 'cucumber' && weather === 'rainy' && humidity === 'moderate') {
+        expectedDisease = 'Downy Mildew';
+      }
+      // Add more conditions and disease names for different crops, weather, and humidity levels
+
+      // Display the expected disease
+      document.getElementById('expectedDisease').innerHTML = expectedDisease;
+    }
+  </script>
+</head>
+<body>
+  <h1>Expected Disease for Crop</h1>
+  <form>
+    <label for="date">Date:</label>
+    <input type="date" id="date" required><br>
+
+    <label for="cropName">Crop Name:</label>
+    <input type="text" id="cropName" required><br>
+
+    <label for="weather">Weather:</label>
+    <input type="text" id="weather" required><br>
+
+    <label for="humidity">Humidity:</label>
+    <input type="text" id="humidity" required><br>
+
+    <button type="button" onclick="generateExpectedDisease()">Generate Expected Disease</button>
+  </form>
+
+  <h2>Expected Disease:</h2>
+  <p id="expectedDisease"></p>
+</body>
+</html>
